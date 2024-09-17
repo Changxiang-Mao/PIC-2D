@@ -43,10 +43,13 @@ $$E_{x,ij}=-\frac{\phi_{i+1,j}-\phi_{i-1,j}}{2dx},~~~ E_{x,0j}=\frac{\phi_{2,j}-
 
 $$E_{y,ij}=-\frac{\phi_{i,j+1}-\phi_{i,j-1}}{2dy},~~~ E_{y,i0}=\frac{\phi_{i,2}-4\phi_{i,1}+3\phi_{i,0}}{2dy},~~~ E_{i,Ny-1}=-\frac{\phi_{i,Ny-3}-4\phi_{i,Nx-2}+3\phi_{i,Nx-1}}{2dy}$$
 
-
 ## 1.4 Leap frog method
 The position of particles are in integer time step, and the velocity of particles are in half-integer time step.
 
 $$\vec{v}_p^{i+1/2}=\vec{v}_p^{i-1/2}+\frac{q\vec{E}_p^i}{m}dt,~~~ \vec{x}_p^{i+1}=\vec{x}_p^i+\vec{v}_p^{i+1/2}dt$$
+
+# 2. Results
+## energy conservation
+![image](energy.png)
 
 
