@@ -4,9 +4,11 @@
 # 1. Basic equations
 Low index $i,j$ denotes number nodes and low index $p$ denotes number of particles. The number of nodes is $N_x,N_y$.
 ## 1.1 Gather
-Suppose we have a field $E(\vec{x}),E_{ij}$. For $p-th$ particle, its position is $x_p,y_p$, then
+Suppose we have a field $E(\vec{x}),\vec{E}_{ij}$. For $p-th$ particle, its position is $x_p,y_p$, then
 
-$$I={\rm int}\left(\frac{x_p-x_0}{dx}\right),~J={\rm int}\left(\frac{y_p-y_0}{dy}\right),~\Delta x=\frac{x_p-x_I}{dx},~\Delta y=\frac{y_p-y_J}{dy},$$
+$$I={\rm int}\left(\frac{x_p-x_{\rm min}}{dx}\right),~J={\rm int}\left(\frac{y_p-y_{\rm min}}{dy}\right),~\Delta x=\frac{x_p-x_I}{dx},~\Delta y=\frac{y_p-y_J}{dy},$$
+
+$$E_{px}=(1-\Delta x)E_{x,ij}+\Delta xE_{x,i+1,j},E_{py}=(1-\Delta y)E_{y,ij}+\Delta yE_{y,i+1,j}$$
 
 ## 1.2 Scatter
 Suppose we konw the position of a particle. We need to scatter the quantity of particle to surrounding nodes.
