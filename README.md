@@ -8,7 +8,10 @@ Suppose we have a field $E(\vec{x}),\vec{E}_{ij}$. For $p-th$ particle, its posi
 
 $$I={\rm int}\left(\frac{x_p-x_{\rm min}}{dx}\right),~J={\rm int}\left(\frac{y_p-y_{\rm min}}{dy}\right),~\Delta x=\frac{x_p-x_I}{dx},~\Delta y=\frac{y_p-y_J}{dy},$$
 
-$$E_{px}=(1-\Delta x)E_{x,ij}+\Delta xE_{x,i+1,j},E_{py}=(1-\Delta y)E_{y,ij}+\Delta yE_{y,i+1,j}$$
+$$E_{px}=(1-\Delta x)(1-\Delta y)E_{x,ij}+\Delta x(1-\Delta y)E_{x,i+1,j}+(1-\Delta x)\Delta yE_{x,i,j+1}+\Delta x\Delta yE_{x,i+1,j+1}$$
+
+$$E_{py}=(1-\Delta x)(1-\Delta y)E_{y,ij}+\Delta x(1-\Delta y)E_{y,i+1,j}+(1-\Delta x)\Delta yE_{y,i,j+1}+\Delta x\Delta yE_{y,i+1,j+1}$$
+
 
 ## 1.2 Scatter
 Suppose we konw the position of a particle. We need to scatter the quantity of particle to surrounding nodes.
