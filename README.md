@@ -47,45 +47,6 @@ $$E_{y,ij}=-\frac{\phi_{i,j+1}-\phi_{i,j-1}}{2dy},~~~ E_{y,i0}=\frac{\phi_{i,2}-
 ## 1.4 Leap frog method
 The position of particles are in integer time step, and the velocity of particles are in half-integer time step.
 
-$$v_p^{i+1/2}=v_p^{i-1/2}+\frac{qE_p^i}{m}dt,~~~ x_p^{i+1}=x_p^i+v_p^{i+1/2}dt$$
-
-## 1.5 Linear equations
-C++ library Eigen: https://eigen.tuxfamily.org/dox/GettingStarted.html
-
-$$\begin{matrix}
-&\phi_{Nx-1}-2\phi_0+\phi_{1}=-4\pi\rho_0dx^2\\
-&\phi_{i-1}-2\phi_i+\phi_{i+1}=-4\pi\rho_idx^2\\
-&\phi_{Nx-2}-2\phi_{Nx-1}+\phi_{1}=-4\pi\rho_{Nx-1}dx^2
-\end{matrix}\Rightarrow \begin{matrix}
-&\phi_{Nx-2}-2\phi_0+\phi_{1}=-4\pi\rho_0dx^2\\
-&\phi_{Nx-1}-2\phi_1+\phi_2=-4\pi\rho_1dx^2\\
-&\phi_{i-1}-2\phi_i+\phi_{i+1}=-4\pi\rho_idx^2\\
-&\phi_{Nx-3}-2\phi_{Nx-2}+\phi_0=-4\pi\rho_{Nx-2}dx^2\\
-&\phi_{Nx-2}-2\phi_{Nx-1}+\phi_{0}=-4\pi\rho_{Nx-1}dx^2
-\end{matrix}\Rightarrow A\cdot\vec{\phi}=\vec{b}$$
-
-$$A=
-\begin{pmatrix}
-&-2,&1,&0,&0,&\cdots,&0,&0,&1\\
-&1,&-2,&1,&0,&\cdots,&0,&0,&0\\
-&0,&1,&-2,&1,&\cdots,&0,&0,&0\\
-&\cdots\\
-&0,&0,&0,&0,&\cdots,&1,&-2,&1\\
-&1,&0,&0,&0,&\cdots,&0,&1,&-2
-\end{pmatrix},b=-4\pi dx^2\begin{pmatrix}
-\rho_0\\
-\rho_1\\
-\rho_2\\
-\cdots\\
-\rho_{Nx-2}\\
-\rho_{Nx-1}
-\end{pmatrix}
-$$
-
-We cannot use LDLT decomposition method if $A$ is asymmetric.
-
-# 2. results
-## Energy conservation
-![image](energy.png)
+$$\vec{v}_p^{i+1/2}=\vec{v}_p^{i-1/2}+\frac{q\vec{E}_p^i}{m}dt,~~~ \vec{x}_p^{i+1}=\vec{x}_p^i+\vec{v}_p^{i+1/2}dt$$
 
 
