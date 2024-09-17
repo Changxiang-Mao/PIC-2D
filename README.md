@@ -12,6 +12,12 @@ $$E_{px}=(1-\Delta x)(1-\Delta y)E_{x,ij}+\Delta x(1-\Delta y)E_{x,i+1,j}+(1-\De
 
 $$E_{py}=(1-\Delta x)(1-\Delta y)E_{y,ij}+\Delta x(1-\Delta y)E_{y,i+1,j}+(1-\Delta x)\Delta yE_{y,i,j+1}+\Delta x\Delta yE_{y,i+1,j+1}$$
 
+$$\vec{E}_p=(1-\Delta x)(1-\Delta y) \vec{E}_{ij}$$
+
+\vec{E}_p=(1-\Delta x)(1-\Delta y)\vec{E}_{ij}+\Delta x(1-\Delta y)\vec{E}_{i+1,j}+(1-\Delta x)\Delta y\vec{E}_{i,j+1}+\Delta x\Delta y\vec{E}_{i+1,j+1}
+
+
+
 
 ## 1.2 Scatter
 Suppose we konw the position of a particle. We need to scatter the quantity of particle to surrounding nodes.
