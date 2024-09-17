@@ -12,9 +12,7 @@ $$E_{px}=(1-\Delta x)(1-\Delta y)E_{x,ij}+\Delta x(1-\Delta y)E_{x,i+1,j}+(1-\De
 
 $$E_{py}=(1-\Delta x)(1-\Delta y)E_{y,ij}+\Delta x(1-\Delta y)E_{y,i+1,j}+(1-\Delta x)\Delta yE_{y,i,j+1}+\Delta x\Delta yE_{y,i+1,j+1}$$
 
-$$\vec{E}_p=(1-\Delta x)(1-\Delta y) \vec{E}_{ij}$$
-
-\vec{E}_p=(1-\Delta x)(1-\Delta y)\vec{E}_{ij}+\Delta x(1-\Delta y)\vec{E}_{i+1,j}+(1-\Delta x)\Delta y\vec{E}_{i,j+1}+\Delta x\Delta y\vec{E}_{i+1,j+1}
+$$\vec{E}_ p=(1-\Delta x)(1-\Delta y)\vec{E}_ {ij}+\Delta x(1-\Delta y)\vec{E}_ {i+1,j}+(1-\Delta x)\Delta y\vec{E}_ {i,j+1}+\Delta x\Delta y\vec{E}_{i+1,j+1}$$
 
 
 
@@ -22,7 +20,11 @@ $$\vec{E}_p=(1-\Delta x)(1-\Delta y) \vec{E}_{ij}$$
 ## 1.2 Scatter
 Suppose we konw the position of a particle. We need to scatter the quantity of particle to surrounding nodes.
 
-$$j={\rm int}\left(\frac{x_p-x_0}{dx}\right),~~~\Delta x=\frac{x_p-x_j}{dx},~~~E_i=(1-\Delta x)E_p,E_{i+1}=\Delta xE_p$$
+$$I={\rm int}\left(\frac{x_p-x_{\rm min}}{dx}\right),~J={\rm int}\left(\frac{y_p-y_{\rm min}}{dy}\right),~\Delta x=\frac{x_p-x_I}{dx},~\Delta y=\frac{y_p-y_J}{dy},$$
+
+$$E_{x,ij}=(1-\Delta x)(1-\Delta y)E_{px},E_{x,i+1,j}=\Delta x(1-\Delta y)E_{px},E_{x,i,j+1}=(1-\Delta x)\Delta yE_{px},E_{x,i+1,j+1}=(1-\Delta x)(1-\Delta y)E_{px}$$
+
+$$\vec{E}_ {ij}=(1-\Delta x)(1-\Delta y)\vec{E}_ {p},\vec{E}_ {i+1,j}=\Delta x(1-\Delta y)\vec{E}_ {p},\vec{E}_ {i,j+1}=(1-\Delta x)\Delta y\vec{E}_ {p},\vec{E}_ {i+1,j+1}=(1-\Delta x)(1-\Delta y)\vec{E}_{p}$$
 
 ## 1.3 Finite Difference Method
 Possion equation is $\nabla^2\phi=-4\pi\rho$, which means
