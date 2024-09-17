@@ -29,7 +29,7 @@ $$\vec{E}_ {ij}=(1-\Delta x)(1-\Delta y)\vec{E}_ {p},\vec{E}_ {i+1,j}=\Delta x(1
 ## 1.3 Finite Difference Method
 Possion equation is $\nabla^2\phi=-4\pi\rho$, which means
 
-$$\frac{\phi_{i+1}+\phi_{i-1}-2\phi_i}{dx^2}=-4\pi\rho_i$$
+$$\frac{\phi_{i+1,j}+\phi_{i-1,j}-2\phi_{ij}}{dx^2}+\frac{\phi_{i,j+1}+\phi_{i,j-1}-2\phi_{ij}}{dy^2}=-4\pi\rho_{ij}$$
 
 $$\phi_i = \frac{1}{2}(\phi_{i+1}+\phi_{i-1}+4\pi\rho_idx^2)$$
 
