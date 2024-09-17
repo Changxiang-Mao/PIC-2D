@@ -2,11 +2,11 @@
 2D PIC simulation
 
 # 1. Basic equations
-Low index $i$ denotes number nodes and low index $p$ denotes number of particles. The number of nodes is $N_x$.
+Low index $i,j$ denotes number nodes and low index $p$ denotes number of particles. The number of nodes is $N_x,N_y$.
 ## 1.1 Gather
-Suppose we have a field $E(\vec{x})$, and represent it as $E_i,i=0,1,2\cdots N_x-1$. For $p-th$ particle, its position is $x_p$, then
+Suppose we have a field $E(\vec{x}),E_{ij}$. For $p-th$ particle, its position is $x_p,y_p$, then
 
-$$j={\rm int}\left(\frac{x_p-x_0}{dx}\right),~~~\Delta x=\frac{x_p-x_j}{dx},~~~E_p=(1-\Delta x)E_i+\Delta xE_{i+1}$$
+$$I={\rm int}\left(\frac{x_p-x_0}{dx}\right),~J={\rm int}\left(\frac{y_p-y_0}{dy}\right),~\Delta x=\frac{x_p-x_I}{dx},~\Delta y=\frac{y_p-y_J}{dy},$$
 
 ## 1.2 Scatter
 Suppose we konw the position of a particle. We need to scatter the quantity of particle to surrounding nodes.
