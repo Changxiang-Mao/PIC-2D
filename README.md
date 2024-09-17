@@ -31,6 +31,12 @@ Possion equation is $\nabla^2\phi=-4\pi\rho$, which means
 
 $$\frac{\phi_{i+1,j}+\phi_{i-1,j}-2\phi_{ij}}{dx^2}+\frac{\phi_{i,j+1}+\phi_{i,j-1}-2\phi_{ij}}{dy^2}=-4\pi\rho_{ij}$$
 
+$$\frac{\phi_{i+1,j}+\phi_{i-1,j}}{dx^2}+\frac{\phi_{i,j+1}+\phi_{i,j-1}}{dy^2}-(\frac{2}{dx^2}+\frac{2}{dy^2})\phi_{ij}=-4\pi\rho_{ij}$$
+
+$$\frac{\phi_{i+1,j}+\phi_{i-1,j}}{dx^2}+\frac{\phi_{i,j+1}+\phi_{i,j-1}}{dy^2}+4\pi\rho_{ij}=(\frac{2}{dx^2}+\frac{2}{dy^2})\phi_{ij}$$
+
+$$\phi_{ij} = \left[\frac{\phi_{i+1,j}+\phi_{i-1,j}}{dx^2}+\frac{\phi_{i,j+1}+\phi_{i,j-1}}{dy^2}+4\pi\rho_{ij}\right]/(\frac{2}{dx^2}+\frac{2}{dy^2})$$
+
 $$\phi_i = \frac{1}{2}(\phi_{i+1}+\phi_{i-1}+4\pi\rho_idx^2)$$
 
 For periodic boundary conditions, 
