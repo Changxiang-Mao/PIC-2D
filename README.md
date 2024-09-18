@@ -50,6 +50,6 @@ $$\vec{v}_p^{i+1/2}=\vec{v}_p^{i-1/2}+\frac{q\vec{E}_p^i}{m}dt,~~~ \vec{x}_p^{i+
 
 # 2. Results
 ## energy conservation
-![image](energy.png)
+[image](energy.png)
 
 
